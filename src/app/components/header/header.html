@@ -1,0 +1,42 @@
+    
+    <!-- <nav class="navbar">
+        
+        <div class="logo">
+            Shop
+        </div>
+        <div class="links">
+            
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </div>
+
+
+
+
+    </nav> -->
+
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                Shop
+            </div>
+            <button class="burger "  (click)="toggleMenu()"   aria-label="Home">
+                ☰
+            </button>
+             <nav [class.open]="isMenuOpen">
+      @for (link of links; track link) {
+        
+         <a [class.active]="activeLink === link"
+          (click)="setActive(link)"
+          href="#{{ link.toLowerCase() }}">
+          {{ link }}
+        </a>
+      }
+    </nav>
+        </div>
+
+    </header>

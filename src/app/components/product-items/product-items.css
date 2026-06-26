@@ -1,0 +1,22 @@
+img{
+    height: 250px;
+    border-radius: 10px;
+}
+
+.product{
+    
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 30px;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-right: 40px;
+    max-width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.name,.price{
+    margin: 3px;
+}

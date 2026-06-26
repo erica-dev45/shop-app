@@ -1,0 +1,9 @@
+.container {
+  min-height: 90vh;
+  max-width: 100% !important;
+  background-color: rgb(218, 220, 247);
+  padding: 2rem;
+}
+
+
+
