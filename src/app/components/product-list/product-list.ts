@@ -1,6 +1,6 @@
 import { ProductItems } from './../product-items/product-items';
-import { Component } from '@angular/core';
-import { CurrencyPipe } from '@angular/common';
+import { Component, signal } from '@angular/core';
+import { CurrencyPipe, UpperCasePipe, JsonPipe, DatePipe } from '@angular/common';
 import { Product } from '../../models/product/product';
 
 
@@ -8,28 +8,102 @@ import { Product } from '../../models/product/product';
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [ProductItems, CurrencyPipe],
+  imports: [ProductItems, CurrencyPipe, UpperCasePipe, JsonPipe, DatePipe],
   templateUrl: './product-list.html',
   styleUrls: ['./product-list.css'],
 })
 export class Productlist {
-  products:  Product[] = [
-    {id:  1, price: 45000, discription: 'Dress',url:'../assets/images/product1.png'},
-    {id:  2, discription: 'DressfrontView', price: 45000,url:'../assets/images/product2.png'},
-    {id:  3, discription: 'Modern Wear', price: 45000,url:'../assets/images/product3.png'},
-    {id:  4, discription: 'Modern Wear', price: 45000,url:'../assets/images/product4.png'},
-    {id:  5, discription: 'Modern Wear', price: 45000,url:'../assets/images/product5.png'},
-    {id:  6, discription: 'Modern Wear', price: 45000,url:'../assets/images/product6.png'},
-    {id:  4, discription: 'Modern Wear', price: 45000,url:'../assets/images/product7.png'},
-    {id:  4, discription: 'Modern Wear', price: 45000,url:'../assets/images/product8.png'}
 
+   products=  signal<Product[]>([
+    {
+      id: 1,
+      name: 'Dress',
+      description:'Tissee a la main, faits au caeroun',
+      soldPrice:  22000,
+      regularPrice: 28000,
+      imageUrl:'../assets/images/product1.png',
+      createdAt:  new Date('2026-01-15'),
+      categories: ['vetements', 'femme', 'traditionnel'],
 
+    },
+    {
+      id: 2,
+      name: 'Sac en raphia',
+      description: ' Tresse en fibre de raphia, original',
+      soldPrice: 10000,
+      regularPrice: 12000,
+      imageUrl: '../assets/images/product2.png',
+      createdAt: new Date('2026-02-10'),
+      categories: ['accessoires', 'artisanat'],
+    },
 
+    {
+      id: 3,
+      name: 'Sac en raphia',
+      description: ' Tresse en fibre de raphia, original',
+      soldPrice: 10000,
+      regularPrice: 12000,
+      imageUrl: '../assets/images/product3.png',
+      createdAt: new Date('2026-02-10'),
+      categories: ['accessoires', 'artisanat'],
+    },
+
+     {
+      id: 4,
+      name: 'Sac en raphia',
+      description: ' Tresse en fibre de raphia, original',
+      soldPrice: 10000,
+      regularPrice: 12000,
+      imageUrl: '../assets/images/product4.png',
+      createdAt: new Date('2026-02-10'),
+      categories: ['accessoires', 'artisanat'],
+    },
+ {
+      id: 5,
+      name: 'Sac en raphia',
+      description: ' Tresse en fibre de raphia, original',
+      soldPrice: 10000,
+      regularPrice: 12000,
+      imageUrl: '../assets/images/product5.png',
+      createdAt: new Date('2026-02-10'),
+      categories: ['accessoires', 'artisanat'],
+    },
+
+     {
+      id: 6,
+      name: 'Sac en raphia',
+      description: ' Tresse en fibre de raphia, original',
+      soldPrice: 10000,
+      regularPrice: 12000,
+      imageUrl: '../assets/images/product6.png',
+      createdAt: new Date('2026-02-10'),
+      categories: ['accessoires', 'artisanat'],
+    },
+
+ {
+      id: 7,
+      name: 'Sac en raphia',
+      description: ' Tresse en fibre de raphia, original',
+      soldPrice: 10000,
+      regularPrice: 12000,
+      imageUrl: '../assets/images/product7.png',
+      createdAt: new Date('2026-02-10'),
+      categories: ['accessoires', 'artisanat'],
+    },
+ {
+      id: 8,
+      name: 'Sac en raphia',
+      description: ' Tresse en fibre de raphia, original',
+      soldPrice: 10000,
+      regularPrice: 12000,
+      imageUrl: '../assets/images/product8.png',
+      createdAt: new Date('2026-02-10'),
+      categories: ['accessoires', 'artisanat'],
+    },
 
 
     
-    
 
-
-  ]
+  ])
+ 
 }
