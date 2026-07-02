@@ -1,6 +1,6 @@
-<!-- <a class="prod" href="#">
+<a class="prod" href="#">
 
-    <div class="container-fluid py-4 " id="product">
+    <!-- <div class="container-fluid py-4 " id="product">
        
             <h1  class="text-center mb-4 ">Our Products</h1>
         <div class="row g-3">
@@ -18,35 +18,35 @@
                 </div>
             }
         </div>
-    </div>
-</a> -->
-
-<div class="product-list container-fluid py-4">
-  <h1 class="text-center mb-4">Our Products</h1>
-
-  <div class="row g-3">
-    @for (product of products(); track product.id) {
-      <div class="col-12 col-sm-6 col-md-4">
-
-          <div class="product-card card h-90 border-0 shadow-sm">
-            <img [src]="product.imageUrl" class="card-img-top" [alt]="product.name" />
-    <div class="card-body">
-
-        <h3 class="card-title mt-2 fw-bold">{{ product.name | uppercase }}</h3>
-
-        <p>{{ product.description }}</p>
-
-        <p class="categories">Catégories : {{ product.categories}}</p>
-
-        <p class="price fw-bold">
-          <span class="sold">{{ product.soldPrice | currency: 'XAF' : 'symbol' }}</span><br>
-          <span class="regular">{{ product.regularPrice | currency: 'XAF' : 'symbol' }}</span>
-        </p>
-
-        <p class="date">Ajouté le {{ product.createdAt | date: 'dd/MM/yyyy' }}</p>
+    </div> -->
+    <div class="product-list container-fluid py-4">
+      <h1 class="text-center mb-4">Our Products</h1>
+    
+      <div class="row g-3">
+        @for (product of products(); track product.id) {
+          <div class="col-12 col-sm-6 col-md-4">
+    
+              <div class="product-card card h-90 border-0 shadow-sm">
+                <img [src]="product.imageUrl" class="card-img-top" [alt]="product.name" />
+        <div class="card-body">
+    
+            <h3 class="card-title mt-2 fw-bold">{{ product.name | uppercase }}</h3>
+    
+            <p>{{ product.description }}</p>
+    
+            <p class="categories">Catégories : {{ product.categories}}</p>
+    
+            <p class="price fw-bold">
+              <span class="sold">{{ product.soldPrice | currency: 'XAF' : 'symbol' }}</span><br>
+              <span class="regular">{{ product.regularPrice | currency: 'XAF' : 'symbol' }}</span>
+            </p>
+    
+            <p class="date">Ajouté le {{ product.createdAt | date: 'dd/MM/yyyy' }}</p>
+          </div>
       </div>
-  </div>
+        </div>
+        }
+      </div>
     </div>
-    }
-  </div>
-</div>
+</a>
+

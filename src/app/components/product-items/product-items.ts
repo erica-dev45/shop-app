@@ -1,3 +1,4 @@
+import { Product } from './../../models/product/product';
 import { Component } from '@angular/core';
 
 
