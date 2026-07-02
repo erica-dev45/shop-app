@@ -105,5 +105,10 @@ export class Productlist {
     
 
   ])
+
+  onProductClicked(product: Product){
+    console.log('Produit clique:', product);
+    
+  }
  
 }

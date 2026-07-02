@@ -1,5 +1,5 @@
 import { Product } from './../../models/product/product';
-import { Component } from '@angular/core';
+import { Component, input,output } from '@angular/core';
 
 
 
@@ -10,5 +10,13 @@ import { Component } from '@angular/core';
   styleUrl: './product-items.css',
 })
 export class ProductItems {
+// product = input<Product>();
 
+product = input.required <Product>();
+
+productClicked = output<Product>();
+onProductClick(){
+  this.productClicked.emit(this.product());
+
+}
 }

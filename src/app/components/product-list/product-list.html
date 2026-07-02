@@ -1,52 +1,14 @@
-<a class="prod" href="#">
-
-    <!-- <div class="container-fluid py-4 " id="product">
-       
-            <h1  class="text-center mb-4 ">Our Products</h1>
-        <div class="row g-3">
-            @for (product of products; track product.id) {
-                <div class="col-12 col-md-3">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="{{product.url}}" class="card-img-top" alt="products">
-                    <div class="card-body">
-                        <p class="card-title mt-2 fw-bold">{{product.discription}}</p>
-                        <div class="price fw-bold">{{product.price |currency}}</div>
-                    </div>    
-
-                    </div>
-
-                </div>
-            }
-        </div>
-    </div> -->
-    <div class="product-list container-fluid py-4">
-      <h1 class="text-center mb-4">Our Products</h1>
-    
-      <div class="row g-3">
-        @for (product of products(); track product.id) {
-          <div class="col-12 col-sm-6 col-md-4">
-    
-              <div class="product-card card h-90 border-0 shadow-sm">
-                <img [src]="product.imageUrl" class="card-img-top" [alt]="product.name" />
-        <div class="card-body">
-    
-            <h3 class="card-title mt-2 fw-bold">{{ product.name | uppercase }}</h3>
-    
-            <p>{{ product.description }}</p>
-    
-            <p class="categories">Catégories : {{ product.categories}}</p>
-    
-            <p class="price fw-bold">
-              <span class="sold">{{ product.soldPrice | currency: 'XAF' : 'symbol' }}</span><br>
-              <span class="regular">{{ product.regularPrice | currency: 'XAF' : 'symbol' }}</span>
-            </p>
-    
-            <p class="date">Ajouté le {{ product.createdAt | date: 'dd/MM/yyyy' }}</p>
-          </div>
-      </div>
-        </div>
-        }
-      </div>
+<a class="product" href="#">
+    <div class="row g-3">
+        <h1 class="text-center mb-4">Our Products</h1>
+  @for (product of products(); track product.id) {
+    <div class="col-12  col-sm-6 col-md-4  h-100 ">
+      <app-product-items 
+      
+      [product]="product"
+      (productClicked)="onProductClicked($event)"
+       />
     </div>
+  }
+</div>
 </a>
-

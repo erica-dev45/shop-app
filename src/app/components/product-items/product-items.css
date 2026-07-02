@@ -1,22 +1,14 @@
-img{
-    height: 250px;
-    border-radius: 10px;
+
+
+
+.card-img-top {
+    height: 580px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: top;
+
 }
 
-.product{
-    
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    margin: 30px;
-    align-content: center;
-    flex-wrap: wrap;
-    margin-right: 40px;
-    max-width: 100%;
-    max-width: 100%;
-    object-fit: contain;
-}
-
-.name,.price{
-    margin: 3px;
+.product-card{
+    margin: 5px;
 }

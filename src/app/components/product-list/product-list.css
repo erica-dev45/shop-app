@@ -5,25 +5,25 @@
 a{
   text-decoration: none;
 }
-.product-list {
+/* .product-list {
   color: inherit;
   text-decoration: none;
-}
+} */
 
-.card-img-top {
+/* .card-img-top {
   height: 600px;
   width: 100%;
   object-fit: cover;    
   object-position: top; 
-}
+} */
 
 
 
-.card {
+/* .card {
   overflow: hidden;
   border-radius: 8px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+} */
 
 .card:hover {
   transform: translateY(-4px);
