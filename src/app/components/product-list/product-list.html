@@ -6,9 +6,17 @@
       <app-product-items 
       
       [product]="product"
-      (productClicked)="onProductClicked($event)"
+      (displayProductViewModal)="onDisplayProductViewModal($event)"
        />
     </div>
   }
 </div>
+@if (isDisplayModal() && modalProduct())
+{
+    <app-modal-product-view
+
+    [product]="modalProduct()"
+    (close)="onCloseModal()"
+    />
+}
 </a>

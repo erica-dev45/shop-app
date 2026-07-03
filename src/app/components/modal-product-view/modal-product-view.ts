@@ -1,9 +1,19 @@
-import { Component } from '@angular/core';
+import { DatePipe } from '@angular/common';
+import { Product } from './../../models/product/product';
+import { Component , input, output} from '@angular/core';
 
 @Component({
   selector: 'app-modal-product-view',
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './modal-product-view.html',
   styleUrl: './modal-product-view.css',
 })
-export class ModalProductView {}
+export class ModalProductView {
+  product = input<Product>();
+
+  close = output<void>();
+
+  onCloseClick(){
+    this.close.emit();
+  }
+}

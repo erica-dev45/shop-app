@@ -1,7 +1,7 @@
 <div class="product-card card  border-0 shadow-sm" (click)="onProductClick()">
-  <img [src]="product()?.imageUrl" [alt]="product()?.name" class="card-img-top">
+  <img [src]="product().imageUrl" [alt]="product().name" class="card-img-top">
   <div class="card-body">
     <h3 class="card-title fw-bold">{{ product()?.name }}</h3>
-    <p>{{ product()?.soldPrice }} FCFA</p>
+    <p>{{ product().soldPrice }} FCFA</p>
   </div>
 </div>

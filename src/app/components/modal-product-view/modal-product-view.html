@@ -1,15 +1,17 @@
-<div class="modal-product-view-overlay"></div>
+<div class="modal-product-view-overlay">
+
+</div>
 <div class="modal-product-view-container">
     <div class="modal-product-view-image">
-        <img src="" alt="">
+        <img [src]="product()?.imageUrl" alt="{{ product()?.name }}">
     </div>
     <div class="modal-product-view-details">
-        <h2>Nom du Produit</h2>
-        <p>Description</p>
-        <h4>Prix sold</h4>
-        <h4>Prix regulier</h4>
-        <p>Cree le 22/06/2026</p>
+        <h2>{{ product()?.name}}</h2>
+        <p>{{ product()?.description}}</p>
+        <h4> {{ product()?.soldPrice }} FCFA</h4>
+        <h4 class="text-decoration-line-through regular "> {{product()?.regularPrice }} FCFA</h4>
+        <p>Cree le {{product()?.createdAt | date:'dd/MM/yyyy' }}</p>
     </div>
-
     <button class="btn btn-close">Fermer</button>
+
 </div>

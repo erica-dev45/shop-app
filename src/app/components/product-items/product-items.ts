@@ -10,13 +10,17 @@ import { Component, input,output } from '@angular/core';
   styleUrl: './product-items.css',
 })
 export class ProductItems {
-// product = input<Product>();
+
 
 product = input.required <Product>();
 
-productClicked = output<Product>();
+displayProductViewModal = output<Product>();
 onProductClick(){
-  this.productClicked.emit(this.product());
+  this.displayProductViewModal.emit(this.product());
+}
+
+productClicked = output<Product>();
+
 
 }
-}
+

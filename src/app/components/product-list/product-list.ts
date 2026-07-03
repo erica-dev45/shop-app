@@ -1,14 +1,15 @@
+import { Product } from './../../models/product/product';
 import { ProductItems } from './../product-items/product-items';
 import { Component, signal } from '@angular/core';
 import { CurrencyPipe, UpperCasePipe, JsonPipe, DatePipe } from '@angular/common';
-import { Product } from '../../models/product/product';
+import { ModalProductView } from "../modal-product-view/modal-product-view";
 
 
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [ProductItems, CurrencyPipe, UpperCasePipe, JsonPipe, DatePipe],
+  imports: [ProductItems, CurrencyPipe, UpperCasePipe, JsonPipe, DatePipe, ModalProductView],
   templateUrl: './product-list.html',
   styleUrls: ['./product-list.css'],
 })
@@ -106,6 +107,19 @@ export class Productlist {
 
   ])
 
+
+    isDisplayModal = signal(false);
+    modalProduct = signal<Product |  undefined>(undefined);
+
+    onDisplayProductViewModal(product: Product){
+      this.modalProduct.set(product);
+      this.isDisplayModal.set(true);
+    }
+
+    onCloseModal(){
+      this.modalProduct.set(undefined);
+      this.isDisplayModal.set(false);
+    }
   onProductClicked(product: Product){
     console.log('Produit clique:', product);
     
