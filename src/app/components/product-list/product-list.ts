@@ -1,6 +1,6 @@
 import { Product } from './../../models/product/product';
 import { ProductItems } from './../product-items/product-items';
-import { Component, signal } from '@angular/core';
+import { Component, output, signal } from '@angular/core';
 import { CurrencyPipe, UpperCasePipe, JsonPipe, DatePipe } from '@angular/common';
 import { ModalProductView } from "../modal-product-view/modal-product-view";
 
@@ -123,6 +123,12 @@ export class Productlist {
   onProductClicked(product: Product){
     console.log('Produit clique:', product);
     
+  }
+  favoriteAdded = output<Product>();
+  onFavoriteAdded(product: Product){
+console.log('Favori ajoute : ', product.name);
+this.favoriteAdded.emit(product);
+
   }
  
 }

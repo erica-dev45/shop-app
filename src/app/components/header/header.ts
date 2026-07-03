@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -19,4 +19,6 @@ export class Header {
     this.activeLink = link;
     this.isMenuOpen = false;
   }
+
+  favoritesCount = input(0);
 }

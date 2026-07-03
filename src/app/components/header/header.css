@@ -85,4 +85,11 @@ nav a.active {
     display: flex;
     align-items: center;
   }
+
 }
+
+.favorites{
+  align-self: center;
+  color: #E9B824;
+}
+

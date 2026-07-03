@@ -16,4 +16,13 @@ export class ModalProductView {
   onCloseClick(){
     this.close.emit();
   }
+
+  favoriteAdded= output<Product>();
+
+  onAddToFavrites(){
+    const p = this.product();
+    if(p){
+      this.favoriteAdded.emit(p);
+    }
+  }
 }

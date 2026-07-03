@@ -28,15 +28,19 @@
                 ☰
             </button>
              <nav [class.open]="isMenuOpen">
-      @for (link of links; track link) {
-        
-         <a [class.active]="activeLink === link"
+                 @for (link of links; track link) {
+                     
+                     <a [class.active]="activeLink === link"
           (click)="setActive(link)"
           href="#{{ link.toLowerCase() }}">
           {{ link }}
         </a>
-      }
+    }
+    <div class="favorites ">
+        ❤ {{ favoritesCount() }} favoris
+    </div>
     </nav>
         </div>
+
 
     </header>
