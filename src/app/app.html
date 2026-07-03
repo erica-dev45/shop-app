@@ -1,3 +1,5 @@
 <app-header [favoritesCount]="favoritesCount()"/>
-<app-container (favoriteAdded)="onFavoritesAdded($event)">
+<app-container
+[favorites]="favorites()"
+ (favoriteAdded)="onFavoritesAdded($event)"/>
 <app-footer/>

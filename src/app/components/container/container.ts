@@ -1,4 +1,4 @@
-import { Component, output } from '@angular/core';
+import { Component, output, input } from '@angular/core';
 import { Productlist} from '../product-list/product-list';
 import { Product } from '../../models/product/product';
 
@@ -10,6 +10,7 @@ import { Product } from '../../models/product/product';
   styleUrls: ['./container.css'],
 })
 export class Container {
+   favorites = input<Product[]>([]);
   favoriteAdded = output<Product>();
 
   onFavriteAdded(product: Product){
