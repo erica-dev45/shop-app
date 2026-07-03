@@ -12,6 +12,6 @@
         <h4 class="text-decoration-line-through regular "> {{product()?.regularPrice }} FCFA</h4>
         <p>Cree le {{product()?.createdAt | date:'dd/MM/yyyy' }}</p>
     </div>
-    <button class="btn btn-close">Fermer</button>
+    <button class="btn btn-close" (click)="onCloseClick()"></button>
 
 </div>
