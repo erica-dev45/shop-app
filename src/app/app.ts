@@ -40,10 +40,10 @@ import { Header } from "./components/header/header";
 import { Container } from "./components/container/container";
 import { Footer } from "./components/footer/footer";
 import { Product } from './models/product/product';
-
+import { Inscription } from './components/inscription/inscription';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Container, Footer],
+  imports: [RouterOutlet, Header, Container, Footer, Inscription],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

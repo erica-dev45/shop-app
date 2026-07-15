@@ -42,3 +42,11 @@
     justify-content: center;
     gap: 8px;
 }
+
+@media screen and (max-width: 900px ){
+
+    .modal-product-view-container{
+        width: 100%;
+    }
+    
+}
